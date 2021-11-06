@@ -1,8 +1,8 @@
 @echo off
 goto config
 :config
-REM ½Å±¾PigeonClub¼¼Êõ²¿°æÈ¨ËùÓĞ https://club.cnklp.cn
-REM ¶¨ÒåÔËĞĞ»·¾³£¬³õÊ¼»¯FFMPEGÓëannie
+REM è„šæœ¬PigeonClubæŠ€æœ¯éƒ¨ç‰ˆæƒæ‰€æœ‰ https://club.cnklp.cn
+REM å®šä¹‰è¿è¡Œç¯å¢ƒï¼Œåˆå§‹åŒ–FFMPEGä¸annie
 
 set tmp="C:\tmp"
 set output="C:\Users\Administrator\Desktop"
@@ -12,20 +12,20 @@ set um_path="D:\CloudMusic"
 set msg=wscript.exe "D:\RunTimePath\batch\msg.vbs"
 set Version=beta3
 
-::Éè¶¨AMV×ª»»Æ÷²ÎÊı
+::è®¾å®šAMVè½¬æ¢å™¨å‚æ•°
 
 set amv_trans_arg=
 
 goto network_check
 
 :network_check
-title ÍøÂç¼à²â - ÊÓÆµÏÂÔØ¡¢×ª»»Æ÷
-echo ÕıÔÚ¼ì²éÍøÂçÁ¬½ÓĞÔ...
+title ç½‘ç»œç›‘æµ‹ - è§†é¢‘ä¸‹è½½ã€è½¬æ¢å™¨
+echo æ­£åœ¨æ£€æŸ¥ç½‘ç»œè¿æ¥æ€§...
 ping %net_test_addr% /n 2 >nul
-if %errorlevel% == 1 (set err_rea=ÍøÂç¼à²âÊ§°Ü£¡ÎŞ·¨Á¬½ÓÖÁ·şÎñÆ÷¡£&&goto error)
-%msg% ×¢Òâ£ºÊ¹ÓÃÊÓÆµÏÂÔØ¹¦ÄÜÊ±£¬É±¶¾Èí¼ş¿ÉÄÜ»á±¨¶¾£¬ÇëÌí¼ÓĞÅÈÎ¡£
+if %errorlevel% == 1 (set err_rea=ç½‘ç»œç›‘æµ‹å¤±è´¥ï¼æ— æ³•è¿æ¥è‡³æœåŠ¡å™¨ã€‚&&goto error)
+%msg% æ³¨æ„ï¼šä½¿ç”¨è§†é¢‘ä¸‹è½½åŠŸèƒ½æ—¶ï¼Œæ€æ¯’è½¯ä»¶å¯èƒ½ä¼šæŠ¥æ¯’ï¼Œè¯·æ·»åŠ ä¿¡ä»»ã€‚
 cls
-REM ¿ªÊ¼Ö´ĞĞ
+REM å¼€å§‹æ‰§è¡Œ
 goto start
 
 :start
@@ -37,47 +37,47 @@ goto start_1
 set start_var=START
 set about_var=START
 color 0f
-title ÊÓÆµÏÂÔØ¡¢×ª»»Æ÷ - Ö÷²Ëµ¥
-echo =====»¶Ó­Ê¹ÓÃÊÓÆµÏÂÔØ×ª»»Æ÷=====
-echo =======ÇëÑ¡ÔñÄãĞèÒªµÄ¹¦ÄÜ=======
+title è§†é¢‘ä¸‹è½½ã€è½¬æ¢å™¨ - ä¸»èœå•
+echo =====æ¬¢è¿ä½¿ç”¨è§†é¢‘ä¸‹è½½è½¬æ¢å™¨=====
+echo =======è¯·é€‰æ‹©ä½ éœ€è¦çš„åŠŸèƒ½=======
 echo ================================
-echo ===1¡¢ÏÂÔØÊÓÆµ²¢×ª»»³ÉMP3¸ñÊ½===
-echo ==2¡¢ÏÂÔØÊÓÆµ²¢±£´æµ½Â·¾¶»ò×ÀÃæ=
-echo =3¡¢×ª»»ÊÓÆµÎÄ¼şµ½MP3¿É²¥·Å¸ñÊ½=
-echo ============0¡¢¹ØÓÚ=============
+echo ===1ã€ä¸‹è½½è§†é¢‘å¹¶è½¬æ¢æˆMP3æ ¼å¼===
+echo ==2ã€ä¸‹è½½è§†é¢‘å¹¶ä¿å­˜åˆ°è·¯å¾„æˆ–æ¡Œé¢=
+echo =3ã€è½¬æ¢è§†é¢‘æ–‡ä»¶åˆ°MP3å¯æ’­æ”¾æ ¼å¼=
+echo ============0ã€å…³äº=============
 echo ================================
-echo ±¾³ÌĞòÖ§³Öbilibili£¬ÓÅ¿á£¬°®ÆæÒÕ»òYouTubeµÈ³£¼ûÆ½Ì¨ÏÂÔØ¡£
-set /p start_var=ÇëÊäÈë¶ÔÓ¦¹¦ÄÜĞòºÅ£º
+echo æœ¬ç¨‹åºæ”¯æŒbilibiliï¼Œä¼˜é…·ï¼Œçˆ±å¥‡è‰ºæˆ–YouTubeç­‰å¸¸è§å¹³å°ä¸‹è½½ã€‚
+set /p start_var=è¯·è¾“å…¥å¯¹åº”åŠŸèƒ½åºå·ï¼š
 if %start_var% == 1 (goto video2mp3)
 ::if %start_var% == 0 (goto about)
-if %start_var% == 0 (%msg% ¼òÒ×BATCH½Å±¾ÏÂÔØ³ÌĞò£¬»ùÓÚAnnie³ÌĞòÓëFFmpegÊµÏÖ¡£°æ±¾ºÅ:%Version%£¬Creeper23456ÖÆ×÷¡£PigeonClub¼¼Êõ×é°æÈ¨ËùÓĞ¡£ &&goto about)
+if %start_var% == 0 (%msg% ç®€æ˜“BATCHè„šæœ¬ä¸‹è½½ç¨‹åºï¼ŒåŸºäºAnnieç¨‹åºä¸FFmpegå®ç°ã€‚ç‰ˆæœ¬å·:%Version%ï¼ŒCreeper23456åˆ¶ä½œã€‚PigeonClubæŠ€æœ¯ç»„ç‰ˆæƒæ‰€æœ‰ã€‚ &&goto about)
 if %start_var% == 3 (goto amvtrans)
-if %start_var% == 2 (goto videodl) else (cls && echo ÊäÈëÁË´íÎóµÄĞòºÅ£¡ &&goto start_1)
+if %start_var% == 2 (goto videodl) else (cls && echo è¾“å…¥äº†é”™è¯¯çš„åºå·ï¼ &&goto start_1)
 
 :video2mp3
 cls
 del /q /s %tmp%\* >nul
-title ÏÂÔØÊÓÆµ...
-echo Çë±£Ö¤ÊäÈëµÄµØÖ·ÒÔhttps://¿ªÍ·¡£
-set /p download_url=ÊäÈëbv»òavºÅ£¬·ÇbÕ¾ÊÓÆµÇëÊäÈëµØÖ·£¨ÔÚä¯ÀÀÆ÷ÖĞ¸´ÖÆ£©£º
+title ä¸‹è½½è§†é¢‘...
+echo è¯·ä¿è¯è¾“å…¥çš„åœ°å€ä»¥https://å¼€å¤´ã€‚
+set /p download_url=è¾“å…¥bvæˆ–avå·ï¼Œébç«™è§†é¢‘è¯·è¾“å…¥åœ°å€ï¼ˆåœ¨æµè§ˆå™¨ä¸­å¤åˆ¶ï¼‰ï¼š
 annie -o %tmp% %download_url%
-if %errorlevel% == 1 (set err_rea=ÊÓÆµ²»´æÔÚ¡¢ÊÓÆµÁ´½ÓÓĞÎó»òÍøÂç³öÏÖÎÊÌâ£¡&&goto error)
+if %errorlevel% == 1 (set err_rea=è§†é¢‘ä¸å­˜åœ¨ã€è§†é¢‘é“¾æ¥æœ‰è¯¯æˆ–ç½‘ç»œå‡ºç°é—®é¢˜ï¼&&goto error)
 
 cls
-echo Õı×ª»»ÎªMP3...
-title Õı×ª»»ÎªMP3...
+echo æ­£è½¬æ¢ä¸ºMP3...
+title æ­£è½¬æ¢ä¸ºMP3...
 dir /b /on %tmp%>%runtime_tmp%\list.txt
 set /p trans_filename=<%runtime_tmp%\list.txt
 ffmpeg -i "%tmp%\%trans_filename%" -f mp3 -vn "%output%\%trans_filename%.mp3"
-if %errorlevel% == 1 (set err_rea=×ªÂë´íÎó£¬ÇëÈ·ÈÏÄãÓµÓĞÖ´ĞĞ³ÌĞòµÄÈ¨ÏŞ£¬»òÎÄ¼ş±¾ÉíÊÇ·ñ´æÔÚÎÊÌâ£¡&&goto error)
+if %errorlevel% == 1 (set err_rea=è½¬ç é”™è¯¯ï¼Œè¯·ç¡®è®¤ä½ æ‹¥æœ‰æ‰§è¡Œç¨‹åºçš„æƒé™ï¼Œæˆ–æ–‡ä»¶æœ¬èº«æ˜¯å¦å­˜åœ¨é—®é¢˜ï¼&&goto error)
 cls
 
 color 0c
-title ×ª»»Íê³É£¡
+title è½¬æ¢å®Œæˆï¼
 echo ========================================================
-echo ×ª»»ÒÑ¾­Íê³É£¡°´ÏÂÈÎÒâ¼ü»Øµ½Ö÷²Ëµ¥¡£
-echo ¾¯¸æ£ºÔÚ¼ÌĞøÖ®Ç°£¬Çë½«×ÀÃæÉÏµÄÎÄ¼şÒÆ¶¯µ½ÄãµÄÂ¼Òô±Ê»òUÅÌ¡£
-echo ¼ÌĞøµ½ÏÂÒ»²½½«»áÉ¾³ıÉÏÒ»²½Íê³ÉµÄ×ª»»ÓëÏÂÔØ¡£
+echo è½¬æ¢å·²ç»å®Œæˆï¼æŒ‰ä¸‹ä»»æ„é”®å›åˆ°ä¸»èœå•ã€‚
+echo è­¦å‘Šï¼šåœ¨ç»§ç»­ä¹‹å‰ï¼Œè¯·å°†æ¡Œé¢ä¸Šçš„æ–‡ä»¶ç§»åŠ¨åˆ°ä½ çš„å½•éŸ³ç¬”æˆ–Uç›˜ã€‚
+echo ç»§ç»­åˆ°ä¸‹ä¸€æ­¥å°†ä¼šåˆ é™¤ä¸Šä¸€æ­¥å®Œæˆçš„è½¬æ¢ä¸ä¸‹è½½ã€‚
 echo ========================================================
 pause
 del /q /s %tmp%\* >nul
@@ -87,66 +87,67 @@ pause
 
 :videodl
 cls
-title ÏÂÔØÊÓÆµ...
+title ä¸‹è½½è§†é¢‘...
 set download_dir=%output%
-set /p download_url=ÊäÈëbv»òavºÅ£¬·ÇbÕ¾ÊÓÆµÇëÊäÈëµØÖ·£¨ÔÚä¯ÀÀÆ÷ÖĞ¸´ÖÆ£©£º
-set /p download_dir=ÊäÈë±£´æÎÄ¼şµÄÂ·¾¶£¬Ö±½Ó»Ø³µÈ·ÈÏÄ¬ÈÏÎª×ÀÃæ£º
+set /p download_url=è¾“å…¥bvæˆ–avå·ï¼Œébç«™è§†é¢‘è¯·è¾“å…¥åœ°å€ï¼ˆåœ¨æµè§ˆå™¨ä¸­å¤åˆ¶ï¼‰ï¼š
+set /p download_dir=è¾“å…¥ä¿å­˜æ–‡ä»¶çš„è·¯å¾„ï¼Œç›´æ¥å›è½¦ç¡®è®¤é»˜è®¤ä¸ºæ¡Œé¢ï¼š
 annie -o %download_dir% %download_url%
-if %errorlevel% == 1 (set err_rea=ÊÓÆµ²»´æÔÚ¡¢ÊÓÆµÁ´½ÓÓĞÎó»òÍøÂç³öÏÖÎÊÌâ£¡&&goto error)
+if %errorlevel% == 1 (set err_rea=è§†é¢‘ä¸å­˜åœ¨ã€è§†é¢‘é“¾æ¥æœ‰è¯¯æˆ–ç½‘ç»œå‡ºç°é—®é¢˜ï¼&&goto error)
 cls
-echo ÏÂÔØÍê³É£¬°´ÈÎÒâ¼ü´ò¿ªÏÂÔØÎÄ¼ş¼Ğ¡£
+echo ä¸‹è½½å®Œæˆï¼ŒæŒ‰ä»»æ„é”®æ‰“å¼€ä¸‹è½½æ–‡ä»¶å¤¹ã€‚
 pause
 explorer %download_dir%
 exit
 
 :about
-title ¹ØÓÚ
+title å…³äº
 cls
 color f0
-echo ¼òÒ×BATCH½Å±¾ÏÂÔØ³ÌĞò£¬»ùÓÚAnnie³ÌĞòÓëFFmpegÊµÏÖ¡£
-echo ÓÉPigeonClub¼¼Êõ²¿Creeper23456±àĞ´£¬¹ÙÍø£ºhttps://club.cnklp.cn
-echo ±¾³ÌĞòÒÀÀµÓÚRunTimePath×ÔÆô³ÌĞòÖ§³Ö£¬Çë²»ÒªĞŞ¸ÄÆô¶¯Ïî»ò×¢²á±í¡£
-echo ÎÒµÄ¸öÈËÍøÕ¾£ºhttps://blog.cnklp.cn
-echo °æ±¾%Version%
-echo ÊäÈëÖ¸Áî¿ÉÒÔÖ´ĞĞÒÔÏÂ²Ù×÷£º
-echo update£º¸üĞÂ±¾³ÌĞò
-echo website£º²é¿´ÎÒÃÇµÄ¹Ù·½ÍøÕ¾
-echo blog£º²é¿´ÎÒµÄ¸öÈË²©¿Í
-echo repo£º²é¿´±¾³ÌĞòÔ´´úÂë(Gtihub)
-echo back£º·µ»ØÖ÷²Ëµ¥
-set /p about_var=¼üÈëÄãÏë¼ÌĞøµÄ²Ù×÷£¬»Ø³µÈ·ÈÏ£º
+echo ç®€æ˜“BATCHè„šæœ¬ä¸‹è½½ç¨‹åºï¼ŒåŸºäºAnnieç¨‹åºä¸FFmpegå®ç°ã€‚
+echo ç”±PigeonClubæŠ€æœ¯éƒ¨Creeper23456ç¼–å†™ï¼Œå®˜ç½‘ï¼šhttps://club.cnklp.cn
+echo æœ¬ç¨‹åºä¾èµ–äºRunTimePathè‡ªå¯ç¨‹åºæ”¯æŒï¼Œè¯·ä¸è¦ä¿®æ”¹å¯åŠ¨é¡¹æˆ–æ³¨å†Œè¡¨ã€‚
+echo æˆ‘çš„ä¸ªäººç½‘ç«™ï¼šhttps://blog.cnklp.cn
+echo ç‰ˆæœ¬%Version%
+echo è¾“å…¥æŒ‡ä»¤å¯ä»¥æ‰§è¡Œä»¥ä¸‹æ“ä½œï¼š
+echo updateï¼šæ›´æ–°æœ¬ç¨‹åº
+echo websiteï¼šæŸ¥çœ‹æˆ‘ä»¬çš„å®˜æ–¹ç½‘ç«™
+echo blogï¼šæŸ¥çœ‹æˆ‘çš„ä¸ªäººåšå®¢
+echo repoï¼šæŸ¥çœ‹æœ¬ç¨‹åºæºä»£ç (Gtihub)
+echo backï¼šè¿”å›ä¸»èœå•
+set /p about_var=é”®å…¥ä½ æƒ³ç»§ç»­çš„æ“ä½œï¼Œå›è½¦ç¡®è®¤ï¼š
 if %about_var% == update (goto update)
 if %about_var% == website (start https://club.cnklp.cn)
 if %about_var% == repo (start https://github.com/Creeper23456/NSYX-videoDownloader/)
 if %about_var% == back (goto start)
 if %about_var% == blog (start https://blog.cnklp.cn) else (goto about)
+goto about
 
 :error
 cls
-title ³ö´íÁË!
-echo ³ö´íÁË£¡
-echo ÔÚÖ´ĞĞ³ÌĞòÊ±£¬·¢ÏÖÁËÒ»¸ö´íÎó£º%err_rea%
+title å‡ºé”™äº†!
+echo å‡ºé”™äº†ï¼
+echo åœ¨æ‰§è¡Œç¨‹åºæ—¶ï¼Œå‘ç°äº†ä¸€ä¸ªé”™è¯¯ï¼š%err_rea%
 pause
 goto start
 
 :um
 ::cls
-title ÍøÒ×ÔÆÒôÀÖ¡¢QQÒôÀÖ½âÃÜ½âÂë
-echo ±¾³ÌĞòÖ§³ÖÍøÒ×ÔÆÒôÀÖNCM¡¢QQÒôÀÖMCG¡¢¿á¹·¡¢¿áÎÒÒôÀÖKGMÎÄ¼şµÄ½âÃÜÓë½âÂë¡£
-set /p um_path=ÇëÊäÈë»òğ¤ÌùÍøÒ×ÔÆÒôÀÖ»òQQÒôÀÖµÄÏÂÔØÄ¿Â¼£º
-rem echo ÇëÎÊÊÇ·ñĞèÒª×ªÂëµ½MP3£¿Èç²»ĞèÒª£¬ÎŞËğ¸ñÊ½½«±»½âÃÜÎª¶ÔÓ¦µÄÎŞËğÎÄ¼ş£¬
-rem set /p um_mode=²¿·ÖÎŞËğÎÄ¼ş¿ÉÄÜÎŞ·¨±»MP3»òÂ¼Òô±ÊÕı³£²¥·Å£¬ÊäÈëYESÒÔÈ·ÈÏ×ª»»£¬·ñÔò»Ø³µ¼ÌĞø¡£
+title ç½‘æ˜“äº‘éŸ³ä¹ã€QQéŸ³ä¹è§£å¯†è§£ç 
+echo æœ¬ç¨‹åºæ”¯æŒç½‘æ˜“äº‘éŸ³ä¹NCMã€QQéŸ³ä¹MCGã€é…·ç‹—ã€é…·æˆ‘éŸ³ä¹KGMæ–‡ä»¶çš„è§£å¯†ä¸è§£ç ã€‚
+set /p um_path=è¯·è¾“å…¥æˆ–é»è´´ç½‘æ˜“äº‘éŸ³ä¹æˆ–QQéŸ³ä¹çš„ä¸‹è½½ç›®å½•ï¼š
+rem echo è¯·é—®æ˜¯å¦éœ€è¦è½¬ç åˆ°MP3ï¼Ÿå¦‚ä¸éœ€è¦ï¼Œæ— æŸæ ¼å¼å°†è¢«è§£å¯†ä¸ºå¯¹åº”çš„æ— æŸæ–‡ä»¶ï¼Œ
+rem set /p um_mode=éƒ¨åˆ†æ— æŸæ–‡ä»¶å¯èƒ½æ— æ³•è¢«MP3æˆ–å½•éŸ³ç¬”æ­£å¸¸æ’­æ”¾ï¼Œè¾“å…¥YESä»¥ç¡®è®¤è½¬æ¢ï¼Œå¦åˆ™å›è½¦ç»§ç»­ã€‚
 
-::¿ªÊ¼×ª»»
+::å¼€å§‹è½¬æ¢
 ::cls
-echo ÕıÔÚ½âÃÜ£¬ÇëÉÔºó...
+echo æ­£åœ¨è§£å¯†ï¼Œè¯·ç¨å...
 rem if %um_mode% == yes (set um_output=%tmp%)
 um -o %output% -i %um_path%
-if %errorlevel% == 1 (set err_rea=½âÃÜÊ§°Ü£¡¿ÉÄÜÊÇÒôÀÖÈí¼şÉı¼¶ÁË¼ÓÃÜËã·¨£¬»òÕßÊÇÊäÈëÁË´íÎóµÄÏÂÔØÄ¿Â¼£¬Çë¼ì²éºóÖØÊÔ¡£&&goto error)
+if %errorlevel% == 1 (set err_rea=è§£å¯†å¤±è´¥ï¼å¯èƒ½æ˜¯éŸ³ä¹è½¯ä»¶å‡çº§äº†åŠ å¯†ç®—æ³•ï¼Œæˆ–è€…æ˜¯è¾“å…¥äº†é”™è¯¯çš„ä¸‹è½½ç›®å½•ï¼Œè¯·æ£€æŸ¥åé‡è¯•ã€‚&&goto error)
 rem if %um_mode% == yes (goto um_ffmpeg)
 
 cls
-echo ½âÃÜÍê³É£¡½âÃÜµÄÎÄ¼şÒÑ¾­´æ·ÅÔÚ×ÀÃæ¡£
+echo è§£å¯†å®Œæˆï¼è§£å¯†çš„æ–‡ä»¶å·²ç»å­˜æ”¾åœ¨æ¡Œé¢ã€‚
 pause
 
 goto start
@@ -155,14 +156,14 @@ goto start
 exit
 
 :amvtrans
-title AMV×ª»»Æ÷
+title AMVè½¬æ¢å™¨
 cls
-echo ×¢Òâ£º×ª»»Ö®Ç°ÇëÈ·ÈÏMP3ÊÇ·ñ´æÔÚÊÓÆµ²¥·Å¹¦ÄÜ¡£
-echo ×ª»»ºÄÊ±½Ï³¤£¬Çë±£³Ö³ÌĞòÔËĞĞ¡£
-set /p amv_input=ÊäÈë±»×ª»»ÊÓÆµÎÄ¼şµÄÂ·¾¶£¬»òÍÏÈëÎÄ¼şµ½´Ë´°¿Ú£º
+echo æ³¨æ„ï¼šè½¬æ¢ä¹‹å‰è¯·ç¡®è®¤MP3æ˜¯å¦å­˜åœ¨è§†é¢‘æ’­æ”¾åŠŸèƒ½ã€‚
+echo è½¬æ¢è€—æ—¶è¾ƒé•¿ï¼Œè¯·ä¿æŒç¨‹åºè¿è¡Œã€‚
+set /p amv_input=è¾“å…¥è¢«è½¬æ¢è§†é¢‘æ–‡ä»¶çš„è·¯å¾„ï¼Œæˆ–æ‹–å…¥æ–‡ä»¶åˆ°æ­¤çª—å£ï¼š
 cls
-echo ³õÊ¼»¯...
-echo ¸´ÖÆÎÄ¼şµ½»º´æÎÄ¼ş¼Ğ...
+echo åˆå§‹åŒ–...
+echo å¤åˆ¶æ–‡ä»¶åˆ°ç¼“å­˜æ–‡ä»¶å¤¹...
 copy %amv_input% %tmp%
 dir /b /on %tmp%>%runtime_tmp%\list.txt
 set /p trans_filename=<%runtime_tmp%\list.txt
@@ -194,14 +195,14 @@ set  amv_trans_arg=%amv_trans_arg%,hqdn3d"
 set  amv_trans_arg=%amv_trans_arg% -pix_fmt yuv420p
 
 cls
-title ÕıÔÚ×ª»»...
+title æ­£åœ¨è½¬æ¢...
 ffmpeg %amv_trans_arg% %output%\%trans_filename%.avi
 
-if %errorlevel% == 1 (set err_rea=×ª»»Ê±³öÏÖÁËÒ»¸ö´íÎó£¡¿ÉÄÜÊÓÆµ²»ÊÜÖ§³Ö»òÂ·¾¶´íÎó&&goto error) 
-echo ³É¹¦£¡°´ÈÎÒâ¼ü»Øµ½Ö÷²Ëµ¥£¬ÎÄ¼şÒÑ±»±£´æÔÚ×ÀÃæ¡£
+if %errorlevel% == 1 (set err_rea=è½¬æ¢æ—¶å‡ºç°äº†ä¸€ä¸ªé”™è¯¯ï¼å¯èƒ½è§†é¢‘ä¸å—æ”¯æŒæˆ–è·¯å¾„é”™è¯¯&&goto error) 
+echo æˆåŠŸï¼æŒ‰ä»»æ„é”®å›åˆ°ä¸»èœå•ï¼Œæ–‡ä»¶å·²è¢«ä¿å­˜åœ¨æ¡Œé¢ã€‚
 pause
 goto start
 
 :update
-%msg% ¹¦ÄÜÍêÉÆÖĞ£¡
+%msg% åŠŸèƒ½å®Œå–„ä¸­ï¼
 goto about
